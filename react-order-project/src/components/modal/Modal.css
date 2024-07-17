@@ -1,0 +1,89 @@
+.fade {
+    position: fixed;
+    background: black;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.modal {
+    
+    margin: 0 auto;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+
+    width: 480px;
+    padding: 24px;
+    border-radius: 12px;
+    background: #fff;
+    min-height: 600px;
+
+    box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
+        0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.modal-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-around; 
+}
+
+.modal .mybutton.reg{
+    margin-top: 27px;
+    padding: 10px;
+    border: 1px solid #5a3aa7;
+    border-radius: 6px;
+    background-color: #5a3aa7;
+    color: #fff;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+.modal .mybutton.reg:hover{
+    border: 1px solid #8b68db;
+    background-color: #8b68db;
+}
+
+
+
+.modal .mybutton.close{ 
+    color: #5a3aa7;
+    transition: all 0.3s ease;
+    margin-left: 400px;
+    cursor: pointer;
+}
+.modal .mybutton.close span{
+    font-size: 32px;
+}
+
+
+.modal .mybutton.close:hover{
+    transform: scale(1.2, 1.2);
+}
+
+.modal h2{
+    color: #5a3aa7;
+}
+
+.modal form label{
+    color: #5a3aa7; 
+}
+.modal form input[type=email],
+.modal form input[type=password] {
+    border: 1px solid #b4b1bd;
+}
+
+.modal form input[type=email]:focus, 
+.modal form input[type=password]:focus  {
+    border: 1px solid #5a3aa7; 
+}

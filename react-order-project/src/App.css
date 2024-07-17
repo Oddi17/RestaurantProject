@@ -1,0 +1,292 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap'); */
+@keyframes bounce {
+
+  0%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5)
+  }
+
+  50% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+
+  100% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+}
+
+:root {
+  --color-text-head: #1E0E62;
+  --color-text-no: #EBEAED;
+  --color-white: #fff;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-light-white: #ffffff54;
+  --color-background-dark: #2F1893;
+
+  /* --box-shadow: 0 2rem 3rem var(--color-light); */
+  --box-shadow: 0 1rem 3rem rgb(132 139 200 / 40%);
+  --f-size-standart: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f6f9;
+}
+
+.container {
+  /* margin: 0 auto; */
+  /* padding: 20px 40px; */
+  user-select: none;
+  font-family: Roboto;
+  font-size: var(--f-size-standart);
+  font-style: normal;
+}
+
+
+header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  /* background: LAVENDER; */
+  background: aliceblue;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-head);
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 20px;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+
+header:hover {
+  box-shadow: none;
+}
+
+header .nav {
+  display: flex;
+  gap: 30px;
+  cursor: pointer;
+
+}
+
+/* header .icons {
+  display: flex;
+  gap: 15px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+} */
+
+.nav div {
+  transition: all 0.1s ease;
+}
+
+.icons span,
+.icons img {
+  transition: all 0.1s ease;
+}
+
+.nav div:hover,
+.icons span:hover,
+.icons img:hover {
+  /* animation: bounce 1s; */
+  /* animation: pulsing 2s; */
+  transform: scale(1.2, 1.2);
+}
+
+.main_container {
+  margin-top: 60px;
+}
+
+
+#preview div {
+  background-image: url('../public/water.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  height: 80vh;
+  width: 100vw;
+}
+
+#preview div h1 {
+  color: azure;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -110%);
+  font-size: 100px;
+  opacity: 0.9;
+  transition: all 0.5s ease;
+}
+
+#preview div h1:hover {
+  opacity: 0.2;
+}
+
+span.error {
+  font-size: 14px;
+  color: rgb(225, 43, 43)
+}
+
+span.success {
+  font-size: 14px;
+  color: rgb(91, 233, 60)
+}
+
+/* для иконки react-календаря */
+.react-datepicker__input-container.react-datepicker__view-calendar-icon {
+  display: flex;
+  align-items: center;
+}
+
+section#about,
+section#menu {
+  padding: 180px 120px 200px 120px;
+}
+
+section h2.--title {
+  font-size: 60px;
+  color: var(--color-text-head);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+section .--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+section .--text {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 380px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+section#about .about-image img {
+  border-radius: 30px;
+  width: 550px;
+}
+
+section#menu .menu-image {
+  width: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+
+}
+
+.collapse-button {
+  font-size: 60px;
+  color: #FFF;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.collapse-button:hover {
+  color: #4631a4;
+}
+
+#reserv .reserv-container {
+  /* margin-top: 200px; */
+  padding: 80px;
+  background-color: var(--color-text-head);
+  color: #FFF;
+}
+
+#reserv .reserv-container .collapse {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#reserv .reserv-container #calendarform{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap:40px; */
+  
+}
+
+#reserv .reserv-container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#reserv .reserv-container #calendarform input[type=submit]{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    background: none;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    border-radius: 26px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+
+}
+
+#reserv .reserv-container #calendarform input[type=submit]:hover{
+  color: #1E0E62;
+  background: #FFF;
+}
+
+
+#reserv .reserv-container input[type=text]{
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#reserv .reserv-container .calendar-container p{
+  margin-top: 10px;
+  
+  text-align: center;
+}
